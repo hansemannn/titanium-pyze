@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: titanium-pyze
+author: Hans Knoechel
+license: Specify your license
+copyright: Copyright (c) 2018 by Your Company
+
+# these should not be edited
+name: titanium-pyze
+moduleid: ti.pyze
+guid: 8282c0dd-f3a6-44b7-829f-7377c8a0e91d
+platform: iphone
+minsdk: 7.0.2.GA
