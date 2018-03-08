@@ -9,6 +9,7 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
+#import "TiApp.h"
 
 #import <Pyze/Pyze.h>
 
@@ -38,12 +39,22 @@
 
 #pragma Public APIs
 
-/** Start implementing your Pyze API's here **/
-
 - (void)initialize:(id)appKey
 {
   ENSURE_SINGLE_ARG(appKey, NSString);
   [Pyze initialize:appKey];
+}
+
+- (void)postEvent:(id)event
+{
+  NSString *eventName = [event objectAtIndex:0];
+  NSDictionary *eventAttributes = [event objectAtIndex:1];
+  
+  if (eventAttributes == nil) {
+    [PyzeCustomEvent postWithEventName:eventName];
+  } else {
+    [PyzeCustomEvent postWithEventName:eventName withAttributes:eventAttributes];
+  }
 }
 
 @end

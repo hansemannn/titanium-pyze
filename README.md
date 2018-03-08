@@ -8,6 +8,10 @@ This module is a prototype of using the Pyze iOS SDK in Titanium. It is subject 
 
 Initializes the Pyze library.
 
+### postEvent(name, attributes [optional])
+
+Base class method which will post the data to server. The "attributes" are optional.
+
 ## License
 
 Apache 2

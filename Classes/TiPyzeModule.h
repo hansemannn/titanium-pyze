@@ -11,4 +11,8 @@
 
 }
 
+- (void)initialize:(id)appKey;
+
+- (void)postEvent:(id)event;
+
 @end
